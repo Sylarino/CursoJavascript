@@ -19,3 +19,15 @@ artesumar("Aquelarre", "Saturno tragando a su hijo",
             function(dato) {
                 console.log("Las obras "+ dato +", son parte de la colección llamada Pinturas Negras")
             })
+
+
+//Funciones de flecha
+//Es una forma de definir funciones de callback más limpias
+
+artesumar("Aquelarre", "Saturno tragando a su hijo",
+            dato => {
+                console.log("Las obras "+ dato)
+            },
+            dato => {
+                console.log("Las obras "+ dato +", son parte de la colección llamada Pinturas Negras")
+            })
