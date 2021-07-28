@@ -5,8 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="text/javascript" src="javascript.js"></script>
 </head>
 <body>
+    <form action="" method="POST" id="formulario">
+        <label name="name" for="name">
+            Nombres:
+            <input id="name" value=""/>
+        </label>
+        <br>
+        <label name="lastname" for="lastname">
+            Apellidos
+            <input id="lastname" value=""/>
+        </label>
+        <br>
+        <label name="age" for="age">
+            Edad:
+            <input id="age" value=""/>
+        </label>
     
+        <input id="submit" value="Enviar" type="submit">
+    </form>
+
+
+    <section>
+        <h1>DATOS</h1>
+        <div id="name-label">
+            <label for="">Nombres: </label>
+        </div>
+        <div id="last-name-label">
+            <label for="">Apellidos: </label>
+        </div>
+        <div id="age-label">
+            <label for="">Edad: </label>
+        </div>
+    </section>
 </body>
 </html>
