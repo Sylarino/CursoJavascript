@@ -1,4 +1,4 @@
-
+'use strict'
 
 var div_usuarios = document.querySelector("#usuarios");
 var div_janet = document.querySelector("#janet");
@@ -20,6 +20,9 @@ var div_profesor = document.querySelector("#profesor");
             mostrarJanet(user.data);
 
         })
+        .catch(error=> {
+            alert("Error en peticiones")
+        })
 
 function getUsuarios() {
     return fetch('https://reqres.in/api/users');
@@ -38,7 +41,7 @@ function getInfo(){
     }
 
     return new Promise((resolve, reject) => {
-        var profesor_stirng = "";
+        var profesor_string = "";
 
         setTimeout(function(){
             profesor_string = JSON.stringify(profesor);
