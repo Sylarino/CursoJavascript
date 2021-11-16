@@ -1,9 +1,31 @@
 <h2>{{titulo}}</h2>
-<button (click)="cambiarTitulo()">Ocultar</button>
+<!-- <button (click)="cambiarTitulo()">Ocultar</button> -->
+<p>
+    Los mejores artistas del mes
+</p>
 <ul>
-    <p>{{listado}}</p>
-    <li>Lana del Rey</li>
-    <li>James Blake</li>
-    <li>Xiu Xiu</li>
-    <li>Machine Girl</li>
+    <li *ngFor="let artista of artistas">
+        {{artista}}
+    </li>
+</ul>
+
+<p>
+    Discos a descubrir
+</p>
+<ul>
+    <li *ngFor="let artemusical of musica">{{artemusical.album}} ({{artemusical.year}}) de {{artemusical.artist}}
+
+        <span *ngIf="artemusical.year == 2021" 
+            [style.background]="artemusical.year == 2021 ? 'purple': 'transparent'"
+            [style.color]="artemusical.year == 2021 ? 'white' : 'black'"
+            >ESTRENO!!!</span>
+    </li>
+</ul>
+
+<p>
+
+</p>
+<ul [ngSwitch]="color">
+    <li *ngSwitchCase="'red'">La mayoria de discos tiene color rojo en su portada</li>
+    <li *ngSwitchCase="'yellow'">La mayoria de discos  tiene color amarillo en su portada</li>
 </ul>
